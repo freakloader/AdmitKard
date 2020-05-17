@@ -1,5 +1,5 @@
 import React from 'react';
-// import otp from '../otp.png';
+import otp from '../otp.png';
 import {TextField,Button,OutlinedInput} from '@material-ui/core';
 
 export default class Popup extends React.Component {
@@ -44,7 +44,7 @@ export default class Popup extends React.Component {
                 <div className="content-modal">
                         <div id="content-modal-body">
                             <div className="compimg">
-                                <img src={"https://as1.ftcdn.net/jpg/01/93/09/00/500_F_193090061_WIT4cQ4IsOVTWoANYH4kbUa6LbmZm5e9.jpg"}></img>
+                                <img src={otp}></img>
                             </div>
                             <p>Please enter the received OTP</p>            
                             <div className="otpparent">
