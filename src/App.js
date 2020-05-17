@@ -2,12 +2,15 @@ import React from 'react';
 import './App.css';
 import Main from './Components/Main'
 
-function App() {
-  return (
-    <div className="App">
-      <Main />
-    </div>
-  );
+export default class App extends React.Component{
+  render(){
+      return (
+        <div className="App">
+          <Main onChange={this.togglestate} parentstate={this.state}/>
+        </div>
+    );
+
+  }
+
 }
 
-export default App;

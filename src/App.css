@@ -1,13 +1,9 @@
 .App {
   text-align: center;
-  /* background-color: #282c34; */
-  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* font-size: calc(10px + 2vmin); */
-  /* color: white; */
 }
 
 .App-logo {
@@ -21,15 +17,17 @@
   }
 }
 
-
+.tickmark
+{
+  max-height:5px;
+  max-width:5px;
+}
 .main
 {
-  /* background-color: #282c34; */
   height:100vh;
   width:50vw;
   display:flex;
   flex-direction: column;
-  /* dis */
   justify-content: center;
   align-items: center;
   border:1px solid black;
@@ -38,18 +36,121 @@
 .compimg
 {
   margin-bottom:10vh;
+  display: flex;
+  justify-content: center;
+  align-content:center;
 }
+.compimg img
+{
+  width:auto;
+  height:100%;
+
+}
+
+
 .main img
 {
-  width:40%;
+  width:50%;
   height:auto;
 }
 
+.otp
+{
+  width:10%;
+  margin:2%;
+}
 
-@media only screen and (max-width: 768px) {
+.bg-modal
+{
+    width:100%;
+    height: 100%;
+    position: absolute; 
+    top:0;
+    background-color:rgba(0,0,0,.3);
+    z-index:2;
+    border-radius:4px;
+    display:none;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    color:black;
+
+    -webkit-transition: all 1.2s ease-in;
+    -moz-transition: all 1.2s ease-in;
+    -o-transition: all 1.2s ease-in;
+    transition: all 1.2s ease-in;
+
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -o-perspective: 1000px;
+    perspective: 1000px; 
+}
+
+.content-modal
+{
+    width:40%;
+    height: 90%;
+    background-color: white;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align:center;
+    padding:15px;
+    border-radius:5px;
+    position: absolute;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 500;
+
+    -webkit-transition: all 1.2s ease;
+    -moz-transition: all 1.2s ease;
+    -ms-transition: all 1.2s ease;
+    transition: all 1.2s ease;
+    
+    box-shadow: 3px 5px 20px 2px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.26);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.26);  
+
+    animation: popin 0.5s;
+}
+
+#content-modal-body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width:100%;
+}
+
+.robotofont
+{
+  font-family: 'Roboto', sans-serif;
+}
+
+.robotoboldfont
+{
+  font-family: 'Oswald', sans-serif;
+  font-weight:500;
+}
+
+@keyframes popin
+{
+    0%{ opacity:0; transform: scale(0.3);}
+    100%{ opacity:1; transform: scale(1);}
+}
+
+
+@media only screen and (max-width: 858px) {
+  
+  .content-modal
+  {
+      width:60%;
+  }
   .main img
   {
     width:60%;
     height:auto;
   }
+  
 }
